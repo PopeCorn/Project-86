@@ -5,7 +5,7 @@ namespace Gameplay.Units
     [Flags] // Flags means you should always multiply the previous value by 2
     public enum UnitType
     {
-        None = 128,
+        None = 256,
         Ameise = 1,
         Lowe = 2,
         Juggernaut = 4,
@@ -13,6 +13,7 @@ namespace Gameplay.Units
         Dinosauria = 16,
         Grauwolf = 32,
         Skorpion = 64,
+        SelfPropelledMine = 128,
         
         Legion = Ameise | Lowe | Dinosauria | Grauwolf | Skorpion,
         Republic = Juggernaut | Scavenger,
