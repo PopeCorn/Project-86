@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 1021277021115851154}
   - component: {fileID: 6254810232810934986}
   - component: {fileID: 2061767764717375851}
+  - component: {fileID: 6328600498822133146}
+  - component: {fileID: -7625555215089424762}
   m_Layer: 0
   m_Name: SelfPropelledMine
   m_TagString: Enemy
@@ -126,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2555425027
+  GlobalObjectIdHash: 4128422084
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -302,10 +304,11 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 622379716115431532
   - rid: 622379716115431533
+  - rid: 622379851944559319
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
-  NetcodeRunOnlyOnOwner: 0
+  NetcodeRunOnlyOnOwner: 1
   references:
     version: 2
     RefIds:
@@ -326,7 +329,16 @@ MonoBehaviour:
           m_Value0: 11998625915746117018
           m_Value1: 5271839694292846342
         Name: State
-        m_Value: 0
+        m_Value: 3
+    - rid: 622379851944559319
+      type: {class: 'BlackboardVariable`1[[ScriptableObjects.AI.AgentSO, Assembly-CSharp]]',
+        ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 11655171499124337369
+          m_Value1: 937734325291473510
+        Name: Agent
+        m_Value: {fileID: 11400000, guid: bc3acc9b49abced41b6a9f589c0e5903, type: 2}
 --- !u!114 &2061767764717375851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,3 +390,49 @@ MonoBehaviour:
   _firstChild: {fileID: 0}
   _sensor: {fileID: 0}
   torqueDamageForce: 0
+--- !u!114 &6328600498822133146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173970247705939438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ae6bbda9fa495d8c3bedf8a3f6ae60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  sprintSpeedMultiplier: 1.2
+  isEngineOn:
+    m_InternalValue: 1
+--- !u!114 &-7625555215089424762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173970247705939438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc8622b1f1042cd84b32df8f676b66c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  isLeader: 0
+  squadMemberState: 0
+  rb: {fileID: 0}
+  leader: {fileID: 0}
+  squadSO: {fileID: 0}
+  squadPosition: 0
+  squadInfo:
+    squadState: 0
+    priorityList: 
+    formation: 0
+    members: []
+    unitKilledCount:
+      m_InternalValue: 0
+    unitLostCount:
+      m_InternalValue: 0
+  agent: {fileID: 0}
+  leaderCrownHeight: 3
